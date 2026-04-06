@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake News Detection</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <a href="#" class="logo">
+        <img src="/static/athenura_logo.png" alt="Athenura" class="logo-img" />
+        <span class="logo-text">Fake News Detection</span>
+      </a>
+
+      <ul>
+        <li><a href="#what">What is it?</a></li>
+        <li><a href="#benefits">Benefits</a></li>
+        <li><a href="#how">How it Works?</a></li>
+        <li><a href="/detect" class="nav-cta">Try it Now →</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+  <div class="hero-bg"></div>
+
+  <div class="hero-left">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      AI-Powered
+    </div>
+
+    <h1>
+      Stop Misinformation<br/>
+      Before It <em>Spreads.</em>
+    </h1>
+
+    <p class="hero-sub">
+      Athenura's Fake News Detection uses advanced Machine Learning to analyse
+      news articles in seconds — giving you a clear verdict on what's real and what's not.
+    </p>
+
+    <div class="hero-actions">
+      <a href="/detect" class="btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        Analyse a News Article
+      </a>
+      <a href="#what" class="btn-secondary">Learn More ↓</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">97%</div>
+        <div class="stat-label">Model Accuracy</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">&lt;2s</div>
+        <div class="stat-label">Prediction Time</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">SVM</div>
+        <div class="stat-label">Core Algorithm</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">Word2Vec</div>
+        <div class="stat-label">Text Embedding</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <img src="/static/hero.jpg" alt="Fake News Detection" class="hero-vector" />
+  </div>
+
+</section>
+
+    <section id="what">
+      <div class="what-text reveal">
+        <div class="section-label">The Problem</div>
+        <h2 class="section-title">What is Fake News Detection?</h2>
+        <p class="section-sub">
+          Fake News Detection is the process of using artificial intelligence to
+          automatically identify whether a news article is factual or
+          fabricated. In an era of viral misinformation, automated detection is
+          no longer optional - it's essential.
+        </p>
+        <p class="section-sub">
+          This system analyses the <strong>title</strong> and
+          <strong>body text</strong>
+          of any news article, converting language into mathematical
+          representations via Word2Vec, and classifying it with a Support vector
+          Machine trained on thousands of real and fake articles.
+        </p>
+      </div>
+
+      <div class="what-visual reveal">
+        <div class="what-card">
+          <div class="card-icon">📰</div>
+          <h4>Real News</h4>
+          <p>
+            Verified, factual reporting from credible sources with consistent
+            language patterns.
+          </p>
+        </div>
+        <div class="what-card">
+          <div class="card-icon">🚨</div>
+          <h4>Fake News</h4>
+          <p>
+            Fabricated or misleading content designed to deceive readers and
+            spread virally.
+          </p>
+        </div>
+        <div class="what-card">
+          <div class="card-icon">🤖</div>
+          <h4>ML Analysis</h4>
+          <p>
+            Our SVM model learns subtle linguistic patterns that separate truth
+            from fiction.
+          </p>
+        </div>
+        <div class="what-card">
+          <div class="card-icon">✅</div>
+          <h4>Instant Verdict</h4>
+          <p>
+            Get a clear REAL or FAKE result in under milliseconds with no
+            ambiguity.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits">
+      <div class="benefits-header reveal">
+        <div class="section-label">Why it Matters</div>
+        <h2 class="section-title">
+          The Benefits of Automated Fake News Detection
+        </h2>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">⚡</div>
+          <h3>Instant Verification</h3>
+          <p>
+            No more waiting hours for fact-checkers.Get a verdict on any article
+            in under two seconds,directly from your browser.
+          </p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">🧠</div>
+          <h3>AI that learns language</h3>
+          <p>
+            Word2Vec understands the context and meaning behind words, not just
+            keywords - making it far smarter than simple rule-based filters.
+          </p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">🛡️</div>
+          <h3>Protect Public Discourse</h3>
+          <p>
+            By identifying misinformation early, we reduce the chance of false
+            narratives influencing public opinion, elections, and health
+            decisions.
+          </p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">📊</div>
+          <h3>High Confidence Results</h3>
+          <p>
+            With 97% accuracy on our test set, Athenura's model gives you
+            reliable, consistent results you can actually trust.
+          </p>
+        </div>
+
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">🌍</div>
+          <h3>Scalable to Any Volume</h3>
+          <p>
+            Whether you're checking one article or thousands, the model scales
+            effortlessly — perfect for journalists, researchers, and platforms.
+          </p>
+        </div>
+
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">🔓</div>
+          <h3>Simple & Accessible</h3>
+          <p>
+            No technical knowledge needed. Paste your article, click a button,
+            and know the truth. That's it.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="how-header reveal">
+        <div class="section-label">The Process</div>
+        <h2 class="section-title">How Does It Work?</h2>
+        <p class="section-sub">
+          A four-step pipeline that turns raw news text into a clear, confident
+          prediction.
+        </p>
+      </div>
+
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-num">1</div>
+          <h4>You Input the Article</h4>
+          <p>
+            Paste the news headline and body text into our detection tool. No
+            account or sign-up needed.
+          </p>
+        </div>
+
+        <div class="step reveal">
+          <div class="step-num">2</div>
+          <h4>Text Preprocessing</h4>
+          <p>
+            The text is cleaned — stopwords removed, tokens normalised — to
+            prepare it for the model.
+          </p>
+        </div>
+
+        <div class="step reveal">
+          <div class="step-num">3</div>
+          <h4>Word2Vec Embedding</h4>
+          <p>
+            Each word is converted into a dense numerical vector that captures
+            semantic meaning and context.
+          </p>
+        </div>
+
+        <div class="step reveal">
+          <div class="step-num">4</div>
+          <h4>SVM Classification</h4>
+          <p>
+            Our trained Support Vector Machine analyses the vectors and outputs
+            a final verdict: REAL or FAKE.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta">
+      <div class="cta-content reveal">
+        <h2>Ready to Detect Fake News in Seconds?</h2>
+        <p>
+          Paste any article into our tool and get an instant AI-powered verdict.
+        </p>
+        <a href="/detect" class="btn-white">
+          🔍 &nbsp; Try the Detector Now
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <a href="/" class="logo">
+        <img src="/static/athenura_logo.png" alt="Athenura" class="logo-img" />
+        <span class="logo-text">Fake News Detection</span>
+      </a>
+      <p>© 2026 Athenura</p>
+    </footer>
+
+    <script>
+      const reveals = document.querySelectorAll(".reveal");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => entry.target.classList.add("visible"), i * 120);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+
+      reveals.forEach((el) => observer.observe(el));
+    </script>
+    
+  </body>
+</html>

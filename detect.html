@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Athenura – Detect Fake News</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body class="detect-page">
+
+
+  <nav>
+    <a href="/" class="logo">
+  <img src="/static/athenura_logo.png" alt="Athenura" class="logo-img" />
+  <span class="logo-text">Fake News <span class="logo-dot">Detection</span></span>
+</a>
+    <ul>
+      <li><a href="/#what">What is it?</a></li>
+<li><a href="/#benefits">Benefits</a></li>
+<li><a href="/#how">How it Works</a></li>
+<li><a href="/detect" class="nav-cta">Try it Now →</a></li>
+    </ul>
+  </nav>
+
+  <section class="detect-section">
+
+    <div class="detect-header reveal">
+      <div class="section-label">AI-Powered Analysis</div>
+      <h1 class="detect-title">Is This News <em>Real?</em></h1>
+      <p class="detect-sub">
+        Paste a news headline and article text below. Our model will analyse 
+        it and give you an instant verdict.
+      </p>
+    </div>
+
+    <div class="detect-card reveal">
+
+      <div class="input-group">
+        <label for="news-title">News Title</label>
+        <input 
+          type="text" 
+          id="news-title" 
+          placeholder="Paste the news headline here..."
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="news-text">News Article Text</label>
+        <textarea 
+          id="news-text" 
+          rows="8"
+          placeholder="Paste the full article or body text here..."
+        ></textarea>
+      </div>
+
+      <button class="btn-detect" id="detect-btn" onclick="analyseNews()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        Analyse Article
+      </button>
+
+    </div>
+
+  </section>
+
+  
+  <div class="result-overlay" id="result-overlay">
+    <div class="result-content">
+      <div class="result-icon" id="result-icon"></div>
+      <h2 class="result-label" id="result-label"></h2>
+      <p class="result-message" id="result-message"></p>
+      <button class="btn-tryagain" onclick="resetPage()">
+        ← Analyse Another Article
+      </button>
+    </div>
+  </div>
+
+  <script src="/static/detect.js"></script>
+
+  <script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 120);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
