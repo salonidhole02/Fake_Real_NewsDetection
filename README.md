@@ -1,87 +1,137 @@
-Fake News Detection — Athenura
+# 🧠 Fake News Detection System — Athenura
 
-An AI-powered web application that detects whether a news article is real or fake using Machine Learning.
+An AI-powered web application that classifies news articles as **REAL or FAKE** using Machine Learning and Natural Language Processing (NLP).
 
-🚀 Live Demo
-Run locally using the steps below.
+---
 
-📌 About the Project
-This project was built to combat the growing problem of misinformation. It uses a Support Vector Machine (SVM) trained on thousands of real and fake news articles, with Word2Vec for text embeddings.
+## 📌 Overview
 
-The web interface is built with HTML, CSS and JavaScript, served through a Flask backend that connects directly to the trained ML models.
+This project is designed to address the growing issue of misinformation by analyzing news content and predicting its authenticity using Machine Learning techniques.
 
-🧠 How It Works
-User pastes a news title and article text into the detection form
-JavaScript sends the input to the Flask backend via fetch()
-Flask cleans the text — removes URLs, special characters, lowercases
-Text is converted into a Word2Vec vector (average of all word vectors)
-The SVM model classifies it as REAL or FAKE
-Result is sent back and the page turns green (REAL) or red (FAKE)
-🏗️ Project Structure
-Fake News Detection/
+The system integrates:
+- Support Vector Machine (SVM)
+- Word2Vec embeddings
+- Flask backend with a responsive frontend
+
+---
+
+## 🚀 Key Features
+
+- 🔍 Real-time news classification  
+- 🧠 NLP-based text preprocessing  
+- ⚙️ Machine Learning model (SVM)  
+- 🌐 Interactive web interface  
+- 📊 High accuracy model performance  
+- 🔗 End-to-end integration (Frontend + Backend + ML)
+
+---
+
+## 🧠 How It Works
+
+1. User enters news title and content  
+2. Input is sent to Flask backend  
+3. Text preprocessing is performed:
+   - Removal of URLs  
+   - Removal of special characters  
+   - Conversion to lowercase  
+4. Text is converted into vector format using **Word2Vec**  
+5. The trained **SVM model** predicts:
+   - ✅ REAL  
+   - 🚨 FAKE  
+6. Result is displayed on the UI  
+
+---
+
+## 🏗️ Project Structure
+
+Fake-News-Detection/
+│
 ├── models/
-│   ├── svm_model.pkl        # Trained SVM model
-│   └── w2v_model.pkl        # Trained Word2Vec model
+│   ├── svm_model.pkl
+│   └── w2v_model.pkl
+│
 ├── templates/
-│   ├── index.html           # Landing page
-│   └── detect.html          # Detection form page
+│   ├── index.html
+│   └── detect.html
+│
 ├── static/
-│   ├── style.css            # All styling
-│   ├── detect.js            # Frontend logic
-│   ├── athenura_logo.png    # Company logo
-│   └── hero.jpg             # Hero section image
-├── dataset/                 # Not included — see below
-├── notebook.ipynb           # Model training notebook
-├── app.py                   # Flask backend
-├── requirements.txt         # Python dependencies
+│   ├── style.css
+│   ├── detect.js
+│   ├── athenura_logo.png
+│   └── hero.jpg
+│
+├── dataset/            # Not included
+├── notebook.ipynb      # Model training
+├── app.py              # Flask backend
+├── requirements.txt
 └── .gitignore
-📊 Model Performance
-Metric	Score
-Accuracy	97.22%
-Precision	0.97
-Recall	0.97
-F1 Score	0.97
-🗂️ Dataset
-Dataset not included in this repo due to file size.
 
-Download from Kaggle: 👉 https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset
+---
 
-Place Fake.csv and True.csv inside the dataset/ folder.
+## 📊 Model Performance
 
-⚙️ Installation & Setup
-1. Clone the repository
-git clone https://github.com/meetc15/fake-news-detection.git
-cd fake-news-detection
-2. Create and activate virtual environment
-# Windows
-python -m venv venv
-venv\Scripts\activate
+| Metric     | Score   |
+|-----------|--------|
+| Accuracy  | 97.22% |
+| Precision | 0.97   |
+| Recall    | 0.97   |
+| F1 Score  | 0.97   |
 
-# Mac/Linux
-python -m venv venv
-source venv/bin/activate
-3. Install dependencies
+---
+
+## 🗂️ Dataset
+
+The dataset is not included due to size limitations.
+
+- Contains real and fake news articles
+- Used for training and testing the model
+
+Place dataset files inside:
+`/dataset/`
+
+---
+
+## ⚙️ How to Run the Project
+
+1. Install required libraries:
 pip install -r requirements.txt
-4. Train the model (optional — only if pkl files are missing)
-Open and run notebook.ipynb top to bottom. This will generate svm_model.pkl and w2v_model.pkl in the models/ folder.
 
-5. Run the Flask app
+2. Run the application:
 python app.py
-6. Open in browser
-http://localhost:xxxx
-🛠️ Tech Stack
-Layer	Technology
-Frontend	HTML, CSS, JavaScript
-Backend	Python, Flask
-ML Model	SVM (scikit-learn)
-Text Embedding	Word2Vec (Gensim)
-Data Processing	Pandas, NumPy
-📁 Requirements
-pandas
-numpy
-scikit-learn
-gensim
-seaborn
-matplotlib
-flask
-flask-cors
+
+3. Open in browser:
+http://localhost:5000
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer            | Technology |
+|------------------|-----------|
+| Frontend         | HTML, CSS, JavaScript |
+| Backend          | Python, Flask |
+| Machine Learning | Scikit-learn (SVM) |
+| NLP              | Gensim (Word2Vec) |
+| Data Processing  | Pandas, NumPy |
+
+---
+
+## 🚀 Future Enhancements
+
+- Integration with live news APIs  
+- Advanced models (LSTM, BERT)  
+- Multilingual support  
+- Deployment on cloud platforms  
+
+---
+
+## 👩‍💻 Author
+
+**Saloni Dhole**  
+Aspiring Data Analyst | Machine Learning Enthusiast  
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub!
